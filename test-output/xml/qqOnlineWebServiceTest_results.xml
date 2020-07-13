@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="MyDemo1"
+           tests="1"
+           failures="0"
+           errors="0"
+           skipped="0"
+           time="0.916">
+  <properties />
+  
+  
+            <testcase name="qqCheckOnline" time="0.916" classname="qqOnlineWebServiceTest" />
+      
+</testsuite>

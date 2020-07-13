@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<DataSet xmlns="http://webxml.com.cn/">
+  <xs:schema id="getForexRmbRate" xmlns="" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xs:element name="getForexRmbRate" msdata:IsDataSet="true" msdata:UseCurrentLocale="true">
+      <xs:complexType>
+        <xs:choice minOccurs="0" maxOccurs="unbounded">
+          <xs:element name="ForexRmbRate">
+            <xs:complexType>
+              <xs:sequence>
+                <xs:element name="Symbol" type="xs:string" minOccurs="0" />
+                <xs:element name="Name" type="xs:string" minOccurs="0" />
+                <xs:element name="mBuyPrice" type="xs:string" minOccurs="0" />
+                <xs:element name="fBuyPrice" type="xs:string" minOccurs="0" />
+                <xs:element name="SellPrice" type="xs:string" minOccurs="0" />
+                <xs:element name="BasePrice" type="xs:string" minOccurs="0" />
+              </xs:sequence>
+            </xs:complexType>
+          </xs:element>
+        </xs:choice>
+      </xs:complexType>
+    </xs:element>
+  </xs:schema>
+  <diffgr:diffgram xmlns:msdata="urn:schemas-microsoft-com:xml-msdata" xmlns:diffgr="urn:schemas-microsoft-com:xml-diffgram-v1">
+    <getForexRmbRate xmlns="">
+      <ForexRmbRate diffgr:id="ForexRmbRate1" msdata:rowOrder="0" diffgr:hasChanges="inserted">
+        <Symbol>已关闭数据服务。</Symbol>
+        <Name>http://www.webxml.com.cn</Name>
+        <mBuyPrice />
+        <fBuyPrice />
+        <SellPrice />
+        <BasePrice />
+      </ForexRmbRate>
+    </getForexRmbRate>
+  </diffgr:diffgram>
+</DataSet>

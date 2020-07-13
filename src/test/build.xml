@@ -1,0 +1,53 @@
+<!--指定testNg需要的Jar包-->
+<project basedir="." default="runtest" name="JekinsAnt">
+
+    <property name="base.dir" value="D:\test\HttpInterface"></property>
+    <property name="src" value="src"></property>
+    <property name="testng.file" value="${base.dir}/testng.xml"></property>
+    <property name="testng.output.dir" value="${base.dir}/test-output"></property>
+    <property name="lib.dir" value="lib"/>
+    <property name="bin" value="bin"/>
+
+    <path id="JekinsAnt.classpath">
+        <fileset dir="${lib.dir}">
+            <include name="*.jar" />
+        </fileset>
+    </path>
+
+    <path id="runpath">
+        <path refid="JekinsAnt.classpath"/>
+        <pathelement location="build/classes"/>
+    </path>
+
+
+
+
+    <taskdef   name="testng"    classname="org.testng.TestNGAntTask"  classpathref="JekinsAnt.classpath">
+        <classpath>
+            <pathelement  location="${lib.dir}/testng-6.9.9.jar"/>
+        </classpath>
+    </taskdef>
+
+
+    <target  name="clean">
+        <delete  dir="${bin}"/>
+        <delete dir="${testng.output.dir}"></delete>
+    </target>
+
+
+    <target name="init"  depends="clean" description="创建存放class文件的目录">
+        <mkdir dir="${bin}"/>
+        <mkdir dir="build/classes"/>
+    </target>
+
+
+    <target name="compile"  description="编译class文件 " depends="init">
+        <javac destdir="build/classes"  source="1.8" target="1.8" srcdir="src"    includeantruntime="0">
+            <compilerarg line="utf-8"/>
+            <classpath  refid="JekinsAnt.classpath"/>
+        </javac>
+        <!-- <echo message="Classpath = ${bin}"/>  -->
+    </target>
+
+
+</project>

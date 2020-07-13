@@ -1,0 +1,22 @@
+<suite name="test22" parallel="true" thread-count="5">
+
+    <test name="MyDemo1">
+
+        <classes>
+            <class name="qqOnlineWebServiceTest">
+                <methods>
+                </methods>
+            </class>
+            <class name="ValidateEmailWebServiceTest">
+                <methods>
+                </methods>
+            </class>
+
+        </classes>
+
+        <listeners>
+            <listener class-name="org.uncommons.reportng.HTMLReporter" />
+            <listener class-name="org.uncommons.reportng.JUnitXMLReporter" />
+        </listeners>
+    </test>
+</suite>
